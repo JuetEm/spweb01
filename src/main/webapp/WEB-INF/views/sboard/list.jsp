@@ -141,11 +141,15 @@
 						"click",
 						function(event) {
 
-							self.location = "list"
+							str = "list"
 									+ '${pageMaker.makeQuery(1)}'
 									+ "&searchType="
 									+ $("select option:selected").val()
-									+ "&keyword=" + $('#keywordInput').val();
+									+ "&keyword=" + encodeURIComponent($('#keywordInput').val());
+									
+							console.log(str);
+							
+							self.location = str;
 
 						});
 

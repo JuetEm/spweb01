@@ -18,7 +18,7 @@ import org.zerock.domain.SearchCriteria;
 import org.zerock.persistence.BoardDAO;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/**/*.xml" })
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/**/root-context.xml" })
 public class BoardDAOTest {
 
   @Inject
