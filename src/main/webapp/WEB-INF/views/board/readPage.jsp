@@ -41,9 +41,9 @@
   </div><!-- /.box-body -->
 
   <div class="box-footer">
-    <button type="submit" class="btn btn-warning">Modify</button>
-    <button type="submit" class="btn btn-danger">REMOVE</button>
-    <button type="submit" class="btn btn-primary">GO LIST </button>
+    <button type="submit" class="btn btn-warning modifyBtn">Modify</button>
+    <button type="submit" class="btn btn-danger removeBtn">REMOVE</button>
+    <button type="submit" class="btn btn-primary goListBtn">GO LIST </button>
   </div>
 
 
@@ -65,7 +65,7 @@ $(document).ready(function(){
 		formObj.submit();
 	});
 	
-	$(".btn-primary").on("click", function(){
+	$(".goListBtn").on("click", function(){
 		formObj.attr("method", "get");
 		formObj.attr("action", "/board/listPage");
 		formObj.submit();
